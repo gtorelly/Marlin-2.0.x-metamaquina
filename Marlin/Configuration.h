@@ -707,7 +707,7 @@
  *
  * - Higher values may affect repeatability or accuracy of some bed probes.
  * - To fix noise install a 100nF ceramic capacitor in parallel with the switch.
- * - This feature is not required for common micro-switches mounted on PCBs
+ * - This feature is not required for common -switches mounted on PCBs
  *   based on the Makerbot design, which already have the 100nF capacitor.
  *
  * :[2,3,4,5,6,7]
@@ -742,7 +742,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {100.252305, 100.398985, 2560, 425}
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {200.1, 195.7, 5120, 850}
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -1123,11 +1123,11 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 198
-#define Y_BED_SIZE 200
+#define X_BED_SIZE 200
+#define Y_BED_SIZE 205
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS -46
+#define X_MIN_POS -44
 #define Y_MIN_POS -6
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
@@ -1504,13 +1504,13 @@
 
 // Preheat Constants
 #define PREHEAT_1_LABEL       "PLA"
-#define PREHEAT_1_TEMP_HOTEND 190
-#define PREHEAT_1_TEMP_BED     80
+#define PREHEAT_1_TEMP_HOTEND  50
+#define PREHEAT_1_TEMP_BED     70
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL       "ABS"
-#define PREHEAT_2_TEMP_HOTEND 220
-#define PREHEAT_2_TEMP_BED    110
+#define PREHEAT_2_TEMP_HOTEND  70
+#define PREHEAT_2_TEMP_BED    115
 #define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
 
 /**
