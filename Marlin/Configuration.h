@@ -70,7 +70,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "(Guilherme, 2020-05-29)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(Guilherme, 2020-06-12)" // Who made the changes.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
@@ -475,7 +475,7 @@
 #define HEATER_5_MAXTEMP 275
 #define HEATER_6_MAXTEMP 275
 #define HEATER_7_MAXTEMP 275
-#define BED_MAXTEMP      150
+#define BED_MAXTEMP      130
 
 //===========================================================================
 //============================= PID Settings ================================
@@ -553,7 +553,7 @@
   //#define PID_DEBUG             // Sends debug data to the serial port. Use 'M303 D' to toggle activation.
   //#define PID_OPENLOOP          // Puts PID in open loop. M104/M140 sets the output power from 0 to PID_MAX
   //#define SLOW_PWM_HEATERS      // PWM with very low frequency (roughly 0.125Hz=8s) and minimum state time of approximately 1s useful for heaters driven by a relay
-  #define PID_FUNCTIONAL_RANGE 10 // If the temperature difference between the target temperature and the actual temperature
+  #define PID_FUNCTIONAL_RANGE 20 // If the temperature difference between the target temperature and the actual temperature
                                   // is more than PID_FUNCTIONAL_RANGE then the PID will be shut off and the heater will be set to min/max.
 #endif
 
@@ -988,7 +988,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 38, 23, -1.30 }
+#define NOZZLE_TO_PROBE_OFFSET { 36, 26, -1.30 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1124,12 +1124,12 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 209
-#define Y_BED_SIZE 186
+#define X_BED_SIZE 201
+#define Y_BED_SIZE 224
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS -33
-#define Y_MIN_POS -20
+#define X_MIN_POS -44
+#define Y_MIN_POS -99
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
